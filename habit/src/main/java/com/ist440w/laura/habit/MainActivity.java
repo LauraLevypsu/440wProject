@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent (this, HabitsViewActivity.class);
         startActivity(intent);
         //TODO: GOOGLE SIGN IN & SAVE USER DATA
+        //TODO: GOOGLE SIGN IN & SAVE USER DATA
     }
 
 

@@ -20,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateHabitActivity"/>
         <activity android:name=".HabitProgressActivity"/>
         <activity android:name=".HabitsViewActivity"/>
     </application>

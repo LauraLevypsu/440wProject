@@ -1,13 +1,22 @@
 package com.ist440w.laura.habit;
 
+import android.app.DialogFragment;
+import android.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+
+import android.app.DialogFragment;
 
 public class HabitsViewActivity extends AppCompatActivity{
 
@@ -36,7 +45,7 @@ public class HabitsViewActivity extends AppCompatActivity{
         createHabitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                openCreateHabitActivity();
+                showCreateHabitDialog();
             }
         });
 
@@ -57,11 +66,6 @@ public class HabitsViewActivity extends AppCompatActivity{
             }
         });
     }
-    public void openCreateHabitActivity(){
-        Intent intent = new Intent (this, CreateHabitActivity.class);
-        startActivity(intent);
-        //TODO: CREATE HABITS IN A DIALOGUE BOX
-    }
 
     public void selectHabit(){
         Intent intent = new Intent (this, HabitProgressActivity.class);
@@ -70,4 +74,10 @@ public class HabitsViewActivity extends AppCompatActivity{
     public void editUserSettings(){
         //TODO: DIALOGUE BOX WHERE USER EDITS USER DATA
     }
+    private void showCreateHabitDialog() {
+        FragmentManager fm = getSupportFragmentManager();
+        CreateHabitDialogFragment createHabitDialog = CreateHabitDialogFragment.newInstance("Create Habit");
+        createHabitDialog.show(fm, "createhabit");
+    }
+
 }
