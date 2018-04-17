@@ -22,7 +22,6 @@
         </activity>
         <activity android:name=".CreateHabitActivity"/>
         <activity android:name=".HabitProgressActivity"/>
-        <activity android:name=".SignOnActivity"/>
         <activity android:name=".HabitsViewActivity"/>
     </application>
 

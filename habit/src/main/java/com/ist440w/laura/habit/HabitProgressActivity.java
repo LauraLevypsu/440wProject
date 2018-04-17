@@ -24,5 +24,7 @@ public class HabitProgressActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        //TODO: CREATE GRAPHS BASED ON DATABASE DATA
     }
 }
